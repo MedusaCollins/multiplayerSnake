@@ -1,10 +1,15 @@
 ﻿using System;
 
-class Program
+namespace multiplayerSnake
 {
-    static void Main(string[] args)
+    class Program
     {
-        Console.WriteLine("Eno babaa");
-        Console.WriteLine("Kerooo babaaa");
+        static void Main(string[] args)
+        {
+            Helper helper = new Helper();
+            helper.Greet("Enes");
+            Console.WriteLine("Eno babaa");
+            Console.WriteLine("Kerooo babaaa");
+        }
     }
 }
