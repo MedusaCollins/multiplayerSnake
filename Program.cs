@@ -10,6 +10,11 @@ namespace SnakeGame
         {
             GameConfig.snake1.body[0] = new Vector2(2, 2);
             GameConfig.snake2.body[0] = new Vector2(17, 17);
+            
+            int iconWidth = 32;
+            int iconHeight = 32;
+            Image iconImage = Raylib.GenImageColor(iconWidth, iconHeight, Color.Blue);
+            Raylib.SetWindowIcon(iconImage);
 
             Raylib.InitWindow(GameConfig.screenWidth, GameConfig.screenHeight, "Multiplayer Snake Game");
             Raylib.SetTargetFPS(14);
@@ -45,6 +50,7 @@ namespace SnakeGame
                 }
             }
 
+            Raylib.UnloadImage(iconImage);
             Raylib.CloseWindow();
         }
     }
