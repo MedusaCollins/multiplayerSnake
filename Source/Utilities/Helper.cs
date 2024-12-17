@@ -9,5 +9,10 @@ namespace multiplayerSnake
         {
             Console.WriteLine($"Merhaba, {name}!");
         }
+
+        public void sayi(int a, int b)
+        {
+            Console.WriteLine(a + b);
+        }
     }
 }
