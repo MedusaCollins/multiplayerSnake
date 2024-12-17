@@ -1,18 +1,32 @@
-﻿using System;
+﻿using Raylib_cs;
 
-namespace multiplayerSnake
-
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        // Initialize Raylib window
+        Raylib.InitWindow(800, 600, "Hello World - Raylib C#");
+
+        // Set the target FPS (frames per second)
+        Raylib.SetTargetFPS(60);
+
+        // Main game loop
+        while (!Raylib.WindowShouldClose())
         {
-            Helper helper = new Helper();
-            helper.Greet("Enes");
-            Console.WriteLine("Eno babaa");
-            Console.WriteLine("Kerooo babaaa");
-            Helper sayi = new Helper();
-            helper.sayi(3,5);
+            // Start drawing
+            Raylib.BeginDrawing();
+
+            // Clear the background to a color
+            Raylib.ClearBackground(Color.DarkGray);
+
+            // Draw "Hello, World!" text at position (10, 10)
+            Raylib.DrawText("Hello, World!", 10, 10, 20, Color.White);
+
+            // End drawing
+            Raylib.EndDrawing();
         }
+
+        // Close the window and OpenGL context
+        Raylib.CloseWindow();
     }
 }
